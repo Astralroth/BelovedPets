@@ -42,7 +42,7 @@
             <td>Pepe</td>
             <td>atendido</td>
             <td><a class="btn btn-primary px-5" href="{% url 'editar_atencion' %}"> Modificar</a></td>
-            <td><a class="btn btn-danger px-5" href="#"> Eliminar</a></td>
+            <td><a class="btn btn-danger px-5" href="#"> Cancelar</a></td>
         </tr>
         <tr>
             <th scope="row">2</th>
@@ -53,7 +53,7 @@
             <td>Cristian</td>
             <td>en espera</td>
             <td><a class="btn btn-primary px-5" href="{% url 'editar_atencion' %}"> Modificar</a></td>
-            <td><a class="btn btn-danger px-5" href="#"> Eliminar</a></td>
+            <td><a class="btn btn-danger px-5" href="#"> Cancelar</a></td>
         </tr>
         <tr>
             <th scope="row">3</th>
@@ -64,7 +64,7 @@
             <td>Pepe</td>
             <td>cancelado</td>
             <td><a class="btn btn-primary px-5" href="{% url 'editar_atencion' %}"> Modificar</a></td>
-            <td><a class="btn btn-danger px-5" href="#"> Eliminar</a></td>
+            <td><a class="btn btn-danger px-5" href="#"> Cancelar</a></td>
         </tr>
         <tr>
             <th scope="row">4</th>
@@ -75,11 +75,11 @@
             <td>Pepe</td>
             <td>posponer</td>
             <td><a class="btn btn-primary px-5" href="{% url 'editar_atencion' %}"> Modificar</a></td>
-            <td><a class="btn btn-danger px-5" href="#"> Eliminar</a></td>
+            <td><a class="btn btn-danger px-5" href="#"> Cancelar</a></td>
         </tbody>
     
     </table>
-    <center><a class="btn btn-success px-5" href="#"> Agregar</a></center>
+    <center><a class="btn btn-success px-5" href="{% url 'crear_atencion' %}"> Agregar</a></center>
 </div>
 
 {% endblock in_content %}

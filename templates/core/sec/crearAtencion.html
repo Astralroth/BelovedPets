@@ -19,10 +19,6 @@
                             <label for="nomMascota">Nombre de la mascota</label>
                             <input type="text" class="form-control" id="nomMascota" name="nomMascota" placeholder="Nombre de la mascota">
                         </div>
-                        <div>
-                            <label for="Nmicrochip">N° de microchip</label>
-                            <input type="text" class="form-control" id="Nmicrochip" name="Nmicrochip" placeholder="N° de microchip">
-                        </div>
 
                         <small>Fecha de atencion (formato 01/01/1999)</small>
                     
@@ -45,16 +41,12 @@
                             <label for="nomVet">Nombre del veterinario</label>
                             <input type="text" class="form-control" id="nomVet" name="nomVet" placeholder="Nombre del veterinario">
                         </div>
-                        <div class="from-group">
-                            <label for="Estado">Estado</label>
-                            <select class="form-control" id="Estado" name="Estado">
-                                <option>Seleccione una opcion</option>
-                                <option>en espera</option>
-                                <option>atendido</option>
-                                <option>cancelado</option> 
-                                <option>posponer</option>
-                            </select>
+
+                        <div class="form-group">
+                            <label for="desc">Descipcion</label>
+                            <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
                         </div>
+
                         <a class="btn px-5" href="{% url 'gestionar_atenciones' %}"> Guardar</a>
                         <a class="btn px-5" href="{% url 'gestionar_atenciones' %}"> Cancelar</a>
                 </div>

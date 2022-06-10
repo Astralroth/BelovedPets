@@ -8,7 +8,7 @@
 {% endblock css %}
 {% block in_content %}
 
-<div class="conteiner py-4">
+<div class="container py-4">
     <div class="row d-flex justify-content-center align-items-center h-1000">
         <div class="col-md-10">
             <div class="card">
@@ -16,58 +16,62 @@
                     <h3>Registro de mascota</h3>
                 </div>
                 <div class="card-body">
-                    <form action="registrarMascota" method="POST">
-                        <div class="form-group ">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
+                    <div class="form-group ">
+                        <label for="nombre">Nombre <span class="badge">Required</span></label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="Nmicrochip">N° de Microchip <span class="badge">Required</span></label>
+                        <input type="number" class="form-control" id="Nmicrochip" name="Nmicrochip"
+                            placeholder="N° de Microchip">
+                    </div>
+                    <div class="form-group">
+                        <label for="Tipo">Tipo <span class="badge">Required</span></label>
+                        <input type="text" class="form-control" id="Tipo" name="Tipo" placeholder="Tipo">
+                    </div>
+                    <div class="form-group">
+                        <label for="edad">Edad <span class="badge">Required</span></label>
+                        <input type="number" min="0" max="99" class="form-control" id="edad" name="edad"
+                            placeholder="Edad">
+                    </div>
+                    <div class="row">
+                        <small>Fecha de nacimiento en formato 01/01/1999</small>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label for="peso">Dia <span class="badge">Required</span></label>
+                            <input type="number" min="0" max="99" class="form-control" id="peso" name="peso"
+                                placeholder="Dia*">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="Tipo">Mes <span class="badge">Required</span></label>
+                            <input type="number" min="0" max="99" class="form-control" id="peso" name="peso"
+                                placeholder="Mes*">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="Tipo">Año <span class="badge">Required</span></label>
+                            <input type="number" min="0" max="99" class="form-control" id="peso" name="peso"
+                                placeholder="Año*">
                         </div>
                         <div class="form-group">
-                            <label for="Nmicrochip">N° de Microchip</label>
-                            <input type="number" class="form-control" id="Nmicrochip" name="Nmicrochip"
-                                placeholder="N° de Microchip">
+                            <label for="sexo">Sexo <span class="badge">Required</span></label>
+                            <select class="form-control" id="sexo" name="sexo">
+                                <option>Macho</option>
+                                <option>Hembra</option>
                         </div>
-                        <div class="form-group">
-                            <label for="Tipo">Tipo</label>
-                            <input type="text" class="form-control" id="Tipo" name="Tipo" placeholder="Tipo">
-                        </div>
-                        <div class="form-group">
-                            <label for="edad">Edad</label>
-                            <input type="number" min="0" max="99" class="form-control" id="edad" name="edad"
-                                placeholder="Edad">
-                        </div>
-                        <div class="row">
-                            <small>Fecha de nacimiento en formato 01/01/1999</small>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-3">
-                                <label for="peso">Dia</label>
-                                <input type="number" min="0" max="99" class="form-control" id="peso" name="peso"
-                                    placeholder="Dia*">
-                            </div>
-                            <div class="form-group col-md-3">
-                                <label for="Tipo">Mes</label>
-                                <input type="number" min="0" max="99" class="form-control" id="peso" name="peso"
-                                    placeholder="Mes*">
-                            </div>
-                            <div class="form-group col-md-3">
-                                <label for="Tipo">Año</label>
-                                <input type="number" min="0" max="99" class="form-control" id="peso" name="peso"
-                                    placeholder="Año*">
-                            </div>
-                            <div class="form-group">
-                                <label for="sexo">Sexo</label>
-                                <select class="form-control" id="sexo" name="sexo">
-                                    <option>Macho</option>
-                                    <option>Hembra</option>
-                            </div>
 
-                            <div class="form-group">
-                                <img src="{% static 'core/img/mascota.png' %}" alt="" name="fotoMascota"
-                                    id="fotoMascota">
-                                <br></br>
-                                <input type="file" name="buscarFoto" id="buscarFoto">
-                            </div>
+                        <div class="form-group">
+                            <label for="buscarFoto">Foto de la mascota <span class="badge">Required</span></label>
+                            <input type="file" name="buscarFoto" id="buscarFoto" class="mt-2">
                         </div>
+
+
+                    </div>
+                    <div class="mt-3">
+                        <a href="#" class="btn btn-primary px-5">Guardar</a>
+                        <a href="{% url 'cli_index' %}" class="btn btn-danger px-5">Cancelar</a>
+                    </div>
+
                 </div>
             </div>
         </div>

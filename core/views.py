@@ -43,6 +43,9 @@ def gestionarAtenciones(request):
 def editarAtencion(request):
     return render(request, 'core/sec/editar.html')
 
+def crearAtencion(request):
+    return render(request, 'core/sec/crearAtencion.html')
+
 # ! No se utiliza por el momento
 # Vistas usuario administrativo
 def admin_index(request):
