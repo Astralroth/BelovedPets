@@ -1,6 +1,6 @@
 from django.urls import path
 
-from core.views import admin_index, buscar_sucursal, cli_index, editarAtencion, gestionarAtenciones, index, login, redirect_to_root, registrarCartillaMedica, sec_index, signin, vet_index
+from core.views import admin_index, cli_index, editarAtencion, gestionarAtenciones, index, login, redirect_to_root, registrarCartillaMedica, sec_index, signin, solicitarAtencion, vet_index, registrarMascota
 
 #Urls usuario anonimo
 urlpatterns = [
@@ -13,7 +13,8 @@ urlpatterns = [
 # Urls usuario normal
 urlpatterns+=[
     path("cli/index/", cli_index, name="cli_index"),
-    path('buscar_sucursal/', buscar_sucursal, name='buscar_sucursal'),
+    path('cli/sol/att', solicitarAtencion, name='solicitar_atencion'),
+    path('cli/add/pet/', registrarMascota, name="registrar_mascota"),
 ]
 
 #Urls usuario veterinario
@@ -26,7 +27,7 @@ urlpatterns+=[
 urlpatterns+=[
     path('sec/index/', sec_index, name="sec_index"),
     path('sec/list/att', gestionarAtenciones, name="gestionar_atenciones"),
-    path('sec/edit/att', editarAtencion, name="editarAtencion")
+    path('sec/edit/att', editarAtencion, name="editar_atencion")
 ]
 
 # ! No se usa por el momento

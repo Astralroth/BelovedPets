@@ -20,13 +20,13 @@
                     Solicitar atencion
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Atencion presencial</a></li>
+                    <li><a class="dropdown-item" href="{% url 'solicitar_atencion' %}">Atencion presencial</a></li>
                     <li><a class="dropdown-item" href="#">Atencion rapida</a></li>
                 </ul>
             </li>
             {% comment %}Hecho por basti {% endcomment %}
             <li class="nav-item">
-                <a href="#" class="nav-link">Registrar mascota</a>
+                <a href="{% url 'registrar_mascota' %}" class="nav-link">Registrar mascota</a>
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link">Notificar mascota extraviada</a>

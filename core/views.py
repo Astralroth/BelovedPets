@@ -20,25 +20,25 @@ def signin(request):
 def cli_index(request):
     return render(request, 'core/cli/index.html')
 
-def buscar_sucursal(request):
-    return render(request, 'core/cli/buscar_sucursal.html')
-
 def registrarMascota(request):
-    return render(request, 'core/cli/registrarMascota')
+    return render(request, 'core/cli/registrarMascota.html')
+
+def solicitarAtencion(request):
+    return render(request, 'core/cli/solicitarAtencion.html')
 
 # Vistas usuario veterinario
 def vet_index(request):
     return render(request, 'core/vet/index.html')
 
 def registrarCartillaMedica(request):
-    return render(request, 'core/vet/registraCartilla.html')
+    return render(request, 'core/vet/registrarCartilla.html')
 
 # Vistas usuario secretario
 def sec_index(request):
     return render(request, 'core/sec/index.html')
 
 def gestionarAtenciones(request):
-    return render(request, 'core/sec/administrar')
+    return render(request, 'core/sec/administrar.html')
 
 def editarAtencion(request):
     return render(request, 'core/sec/editar.html')
