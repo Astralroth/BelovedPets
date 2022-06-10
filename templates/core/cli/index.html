@@ -1,0 +1,54 @@
+{% extends '../../base.html' %}
+{% load static %}
+{% block css %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'core/gradient.css' %}">
+{% endblock css %}
+
+{% block content %}
+<nav class="navbar navbar-expand-lg bg-primary bg-opacity-50 bg-secondary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'cli_index' %}">Beloved Pets</a>
+        <ul class="navbar-nav mb-2 mb-lg-0 justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'cli_index' %}">Inicio</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Solicitar atencion
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Atencion presencial</a></li>
+                    <li><a class="dropdown-item" href="#">Atencion rapida</a></li>
+                </ul>
+            </li>
+            {% comment %}Hecho por basti {% endcomment %}
+            <li class="nav-item">
+                <a href="#" class="nav-link">Registrar mascota</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Notificar mascota extraviada</a>
+            </li>
+            {% comment %} Hacer por franco {% endcomment %}
+            <li class="nav-item">
+                <a href="#" class="nav-link">Buscar sucursales</a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'login' %}" class="nav-link">Cerrar session</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+{% block in_content %}{% endblock in_content %}
+{% endblock  %}
+
+{% block js %}
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous">
+</script>
+{% endblock js %}

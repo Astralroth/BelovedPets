@@ -1,0 +1,43 @@
+.contenido-tabla {
+    border-collapse: collapse;
+    margin: 15px;
+    font-size: 16px;
+    min-width: 100px;
+}
+
+.contenido-tabla thead tr {
+    background-color: rgb(105, 13, 204);
+    color: rgb(255, 255, 255);
+    text-align: left;
+    font-weight: bold;
+}
+
+.contenido-tabla th,
+.contenido-tabla td{
+    padding: 12px 15px;
+}
+
+.contenido-tabla tbody tr{
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.contenido-tabla tbody tr:nth-of-type(even){
+    border-bottom: solid rgb(255, 255, 255);
+}
+
+.contenido-tabla tbody tr:last-of-type{
+    border-bottom: 2px solid rgba(106, 17, 203, 1);
+}
+
+.button {
+    background-color: rgba(106, 17, 203, 1);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
