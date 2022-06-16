@@ -1,6 +1,6 @@
 from django.urls import path
 
-from core.views import admin_index, cli_index, crearAtencion, editarAtencion, gestionarAtenciones, index, login, redirect_to_root, registrarCartillaMedica, sec_index, signin, solicitarAtencion, vet_index, registrarMascota
+from core.views import admin_index, cli_index, crearAtencion, editarAtencion, gestionarAtenciones, index, login, redirect_to_root, registrarCartillaMedica, sec_index, signin, solicitarAtencion, solicitarAtencionRapida, vet_index, registrarMascota
 
 #Urls usuario anonimo
 urlpatterns = [
@@ -14,6 +14,7 @@ urlpatterns = [
 urlpatterns+=[
     path("cli/index/", cli_index, name="cli_index"),
     path('cli/sol/att', solicitarAtencion, name='solicitar_atencion'),
+    path('cli/sol/attr', solicitarAtencionRapida, name='solicitar_atencion_rapida'),
     path('cli/add/pet/', registrarMascota, name="registrar_mascota"),
 ]
 

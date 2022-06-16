@@ -16,6 +16,7 @@ def login(request):
 def signin(request):
     return render(request, 'core/cred/signin.html')
 
+
 # Vistas usuario normal
 def cli_index(request):
     return render(request, 'core/cli/index.html')
@@ -26,12 +27,17 @@ def registrarMascota(request):
 def solicitarAtencion(request):
     return render(request, 'core/cli/solicitarAtencion.html')
 
+def solicitarAtencionRapida(request):
+    return render(request, 'core/cli/solicitarAtencionRapida.html')
+
+
 # Vistas usuario veterinario
 def vet_index(request):
     return render(request, 'core/vet/index.html')
 
 def registrarCartillaMedica(request):
     return render(request, 'core/vet/registrarCartilla.html')
+
 
 # Vistas usuario secretario
 def sec_index(request):
@@ -45,6 +51,7 @@ def editarAtencion(request):
 
 def crearAtencion(request):
     return render(request, 'core/sec/crearAtencion.html')
+
 
 # ! No se utiliza por el momento
 # Vistas usuario administrativo
