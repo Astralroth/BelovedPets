@@ -9,31 +9,13 @@
 {% block content %}
 <nav class="navbar navbar-expand-lg bg-primary bg-opacity-50 bg-secondary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'cli_index' %}">Beloved Pets</a>
+        <a class="navbar-brand" href="{% url 'sec_index' %}">Beloved Pets</a>
         <ul class="navbar-nav mb-2 mb-lg-0 justify-content-end">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'cli_index' %}">Inicio</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Solicitar atencion
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="{% url 'solicitar_atencion' %}">Atencion presencial</a></li>
-                    <li><a class="dropdown-item" href="{% url 'solicitar_atencion_rapida' %}">Atencion rapida</a></li>
-                </ul>
-            </li>
-            {% comment %}Hecho por basti {% endcomment %}
-            <li class="nav-item">
-                <a href="{% url 'registrar_mascota' %}" class="nav-link">Registrar mascota</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'sec_index' %}">Inicio</a>
             </li>
             <li class="nav-item">
-                <a href="{% url 'mascota_extraviada_cli' %}" class="nav-link">Notificar mascota extraviada</a>
-            </li>
-            {% comment %} Hacer por franco {% endcomment %}
-            <li class="nav-item">
-                <a href="#" class="nav-link">Buscar sucursales</a>
+                <a href="{% url 'gestionar_atenciones' %}" class="nav-link">Gestionar atenciones</a>
             </li>
             <li class="nav-item">
                 <a href="{% url 'login' %}" class="nav-link">Cerrar session</a>

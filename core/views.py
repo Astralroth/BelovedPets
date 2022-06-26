@@ -30,6 +30,18 @@ def solicitarAtencion(request):
 def solicitarAtencionRapida(request):
     return render(request, 'core/cli/solicitarAtencionRapida.html')
 
+def mascotaExtraviadaCli(request):
+    return render(request, 'core/cli/masExtraviada.html')
+
+def publicarRuta(request):
+    return render(request, 'core/admin/publicarRuta.html')
+
+def publicarPaseo(request):
+    return render(request, 'core/admin/publicarPaseo.html')
+
+def listarPaseos(request):
+    return render(request, 'core/admin/listarPaseos.html')
+
 
 # Vistas usuario veterinario
 def vet_index(request):
@@ -37,6 +49,18 @@ def vet_index(request):
 
 def registrarCartillaMedica(request):
     return render(request, 'core/vet/registrarCartilla.html')
+
+def listarAtenciones(request):
+    return render(request, 'core/vet/listarAtenciones.html')
+
+def atencion(request):
+    return render(request, 'core/vet/atencion.html')
+
+def atencionRapida(request):
+    return render(request, 'core/vet/atencionRapida.html')
+
+def mascotaExtraviadaVet(request):
+    return render(request, 'core/vet/masExtraviada.html')
 
 
 # Vistas usuario secretario
