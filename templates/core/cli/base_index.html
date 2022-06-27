@@ -4,6 +4,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 <link rel="stylesheet" href="{% static 'core/gradient.css' %}">
+{% block in_css %}{% endblock in_css %}
 {% endblock css %}
 
 {% block content %}
@@ -24,16 +25,27 @@
                     <li><a class="dropdown-item" href="{% url 'solicitar_atencion_rapida' %}">Atencion rapida</a></li>
                 </ul>
             </li>
-            {% comment %}Hecho por basti {% endcomment %}
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Publicar
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="{% url 'publicar_paseo' %}">Paseo</a></li>
+                    <li><a class="dropdown-item" href="{% url 'publicar_ruta' %}">Ruta de paseo</a></li>
+                </ul>
+            </li>
             <li class="nav-item">
                 <a href="{% url 'registrar_mascota' %}" class="nav-link">Registrar mascota</a>
             </li>
             <li class="nav-item">
                 <a href="{% url 'mascota_extraviada_cli' %}" class="nav-link">Notificar mascota extraviada</a>
             </li>
-            {% comment %} Hacer por franco {% endcomment %}
             <li class="nav-item">
-                <a href="#" class="nav-link">Buscar sucursales</a>
+                <a href="{% url 'buscar_sucursal' %}" class="nav-link">Buscar sucursales</a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'perfil_cli' %}" class="nav-link">Mi perfil</a>
             </li>
             <li class="nav-item">
                 <a href="{% url 'login' %}" class="nav-link">Cerrar session</a>
@@ -51,4 +63,5 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
     integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous">
 </script>
+{% block in_js %}{% endblock in_js %}
 {% endblock js %}

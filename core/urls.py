@@ -1,6 +1,6 @@
 from django.urls import path
 
-from core.views import admin_index, atencion, atencionRapida, cli_index, crearAtencion, editarAtencion, gestionarAtenciones, index, listarAtenciones, listarPaseos, login, mascotaExtraviadaCli, mascotaExtraviadaVet, publicarPaseo, publicarRuta, redirect_to_root, registrarCartillaMedica, sec_index, signin, solicitarAtencion, solicitarAtencionRapida, vet_index, registrarMascota
+from core.views import admin_index, atencion, atencionRapida, buscarSucursal, cli_index, crearAtencion, editarAtencion, gestionarAtenciones, index, listarAtenciones, listarPaseos, login, mascotaExtraviadaCli, mascotaExtraviadaVet, perfil_cli, publicarPaseo, publicarRuta, redirect_to_root, registrarCartillaMedica, sec_index, signin, solicitarAtencion, solicitarAtencionRapida, vet_index, registrarMascota
 
 #Urls usuario anonimo
 urlpatterns = [
@@ -20,6 +20,8 @@ urlpatterns+=[
     path('cli/add/rute', publicarRuta, name="publicar_ruta"),
     path('cli/add/walk', publicarPaseo, name="publicar_paseo"),
     path('cli/list/walk', listarPaseos, name="listar_paseos"),
+    path('cli/profile', perfil_cli, name="perfil_cli"),
+    path('cli/seach/suc', buscarSucursal, name="buscar_sucursal"),
 ]
 
 #Urls usuario veterinario
@@ -29,7 +31,7 @@ urlpatterns+=[
     path('vet/list/att', listarAtenciones, name="listar_atenciones"),
     path('vet/det/att', atencion, name="atencion"),
     path('vet/det/attr', atencionRapida, name="atencion_rapida"),
-    path('vet/ext/pet', mascotaExtraviadaVet, name="mascota_extraviada_vet" )
+    path('vet/ext/pet', mascotaExtraviadaVet, name="mascota_extraviada_vet" ),
 ]
 
 #Urls usuario secretario

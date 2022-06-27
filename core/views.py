@@ -34,13 +34,19 @@ def mascotaExtraviadaCli(request):
     return render(request, 'core/cli/masExtraviada.html')
 
 def publicarRuta(request):
-    return render(request, 'core/admin/publicarRuta.html')
+    return render(request, 'core/cli/publicarRuta.html')
 
 def publicarPaseo(request):
-    return render(request, 'core/admin/publicarPaseo.html')
+    return render(request, 'core/cli/publicarPaseo.html')
 
 def listarPaseos(request):
-    return render(request, 'core/admin/listarPaseos.html')
+    return render(request, 'core/cli/listarPaseos.html')
+
+def perfil_cli(request):
+    return render(request, 'core/cli/perfil.html')
+
+def buscarSucursal(request):
+    return render(request, 'core/cli/buscarSucursal.html')
 
 
 # Vistas usuario veterinario
