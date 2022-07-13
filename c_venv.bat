@@ -1,0 +1,1 @@
+cd "../" && py -m venv venv_bp && cd BP && "../venv_bp/Scripts/activate.bat" && pip install -r requirements.txt
